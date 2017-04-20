@@ -65,7 +65,7 @@
         <dependencies>
             <!-- easytoolsoft -->
             <dependency>
-                <groupId>com.easytoolsoft.commons</groupId>
+                <groupId>com.easytoolsoft</groupId>
                 <artifactId>easytoolsoft-mybatis</artifactId>
                 <version>${easytoolsoft-mybatis.version}</version>
                 <exclusions>
@@ -80,7 +80,7 @@
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>com.easytoolsoft.commons</groupId>
+                <groupId>com.easytoolsoft</groupId>
                 <artifactId>easytoolsoft-report-engine</artifactId>
                 <version>${easytoolsoft-report.version}</version>
             </dependency>
