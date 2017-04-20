@@ -17,6 +17,7 @@
         <project.github.url>https://github.com/easytoolsoft/easytoolsoft-spring-boot-starter-parent.git</project.github.url>
         <java.version>1.8</java.version>
         <java.encoding>UTF-8</java.encoding>
+        <scala.version>2.12.2</scala.version>
         <!-- overrided -->
         <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
         <!-- easytoolsoft -->
@@ -56,7 +57,8 @@
         <rest-assured.version>2.9.0</rest-assured.version>
         <system-rules.version>1.16.0</system-rules.version>
         <!-- plugins -->
-        <docker-maven-plugin-spotify.version>0.4.13</docker-maven-plugin-spotify.version>
+        <maven-plugin-docker-spotify.version>0.4.13</maven-plugin-docker-spotify.version>
+        <maven-plugin-scala.version>3.2.2</maven-plugin-scala.version>
     </properties>
     <prerequisites>
         <maven>3.2.1</maven>
@@ -227,6 +229,12 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${springfox-swagger.version}</version>
             </dependency>
+            <!-- scala -->
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala.version}</version>
+            </dependency>
             <!-- test -->
             <dependency>
                 <groupId>org.powermock</groupId>
@@ -269,12 +277,32 @@
         </dependencies>
     </dependencyManagement>
     <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
         <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>com.spotify</groupId>
                     <artifactId>docker-maven-plugin</artifactId>
-                    <version>${docker-maven-plugin-spotify.version}</version>
+                    <version>${maven-plugin-docker-spotify.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <version>${maven-plugin-scala.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <args>
+                            <arg>-target:jvm-${java.version}</arg>
+                        </args>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
