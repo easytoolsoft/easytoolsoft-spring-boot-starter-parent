@@ -94,11 +94,6 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
-            <dependency>
-                <groupId>nz.net.ultraq.thymeleaf</groupId>
-                <artifactId>thymeleaf-layout-dialect</artifactId>
-                <version>${thymeleaf-layout-dialect.version}</version>
-            </dependency>
             <!-- apache commons -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
