@@ -15,16 +15,15 @@
     <url>http://www.easytoolsoft.com/</url>
     <properties>
         <project.github.group>https://github.com/easytoolsoft</project.github.group>
-        <project.github.url>https://github.com/easytoolsoft/easytoolsoft-spring-boot-starter-parent.git
-        </project.github.url>
+        <project.github.url>https://github.com/easytoolsoft/easytoolsoft-spring-boot-starter-parent.git</project.github.url>
         <java.version>1.8</java.version>
         <java.encoding>UTF-8</java.encoding>
         <scala.version>2.12.2</scala.version>
-        <!-- overrided -->
-        <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
         <!-- easytoolsoft -->
         <easytoolsoft-mybatis.version>0.0.1-SNAPSHOT</easytoolsoft-mybatis.version>
         <easytoolsoft-report.version>0.0.1-SNAPSHOT</easytoolsoft-report.version>
+        <!-- overrided -->
+        <thymeleaf.version>3.0.5.RELEASE</thymeleaf.version>
         <!-- spring boot -->
         <spring-boot.version>${project.parent.version}</spring-boot.version>
         <thymeleaf-layout-dialect.version>2.1.2</thymeleaf-layout-dialect.version>
@@ -76,23 +75,18 @@
                 <groupId>com.easytoolsoft</groupId>
                 <artifactId>easytoolsoft-mybatis</artifactId>
                 <version>${easytoolsoft-mybatis.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>spring-beans</artifactId>
-                        <groupId>org.springframework</groupId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>mybatis</artifactId>
-                        <groupId>org.mybatis</groupId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>com.easytoolsoft</groupId>
                 <artifactId>easytoolsoft-report-engine</artifactId>
                 <version>${easytoolsoft-report.version}</version>
             </dependency>
-            <!-- third-party spring boot starters -->
+            <dependency>
+                <groupId>com.easytoolsoft</groupId>
+                <artifactId>easytoolsoft-report-queryer</artifactId>
+                <version>${easytoolsoft-report.version}</version>
+            </dependency>
+            <!--  spring boot or third-party's starters -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
