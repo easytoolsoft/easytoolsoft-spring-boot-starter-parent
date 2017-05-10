@@ -76,10 +76,6 @@
             <dependency>
                 <groupId>com.easytoolsoft</groupId>
                 <artifactId>easytoolsoft-lang</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>com.easytoolsoft</groupId>
-                <artifactId>easytoolsoft-lang</artifactId>
                 <version>${easytoolsoft-lang.version}</version>
             </dependency>
             <dependency>
