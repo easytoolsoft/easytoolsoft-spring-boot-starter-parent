@@ -20,6 +20,7 @@
         <java.encoding>UTF-8</java.encoding>
         <scala.version>2.12.2</scala.version>
         <!-- easytoolsoft -->
+        <easytoolsoft-lang.version>0.0.1-SNAPSHOT</easytoolsoft-lang.version>
         <easytoolsoft-mybatis.version>0.0.1-SNAPSHOT</easytoolsoft-mybatis.version>
         <easytoolsoft-report.version>0.0.1-SNAPSHOT</easytoolsoft-report.version>
         <easytoolsoft-spring-support.version>0.0.1-SNAPSHOT</easytoolsoft-spring-support.version>
@@ -72,6 +73,15 @@
     <dependencyManagement>
         <dependencies>
             <!-- easytoolsoft -->
+            <dependency>
+                <groupId>com.easytoolsoft</groupId>
+                <artifactId>easytoolsoft-lang</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.easytoolsoft</groupId>
+                <artifactId>easytoolsoft-lang</artifactId>
+                <version>${easytoolsoft-lang.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.easytoolsoft</groupId>
                 <artifactId>easytoolsoft-mybatis</artifactId>
